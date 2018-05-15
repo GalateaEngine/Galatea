@@ -21,7 +21,7 @@ classify_emotion("i wouldn't recommend this product to anyone",True)
     - if **Flase** returns more likely classification (string) (ex, 'bored')
 
 
-
+----
 ### Usage (Microservice)
 Start with `python3 ./server.py`
 #### API
@@ -85,7 +85,7 @@ Start with `python3 ./server.py`
     - **Returns**
          - ( json ) `{"status":"alive"}`
 
-#### CONFIG
+#### Config (config.json)
 - **"database_name"**(string): The name of your database file
 - **"microservice_port"**(int): The port of your microservice
 - **"microservice_host"**(string): The ip of your microservice
