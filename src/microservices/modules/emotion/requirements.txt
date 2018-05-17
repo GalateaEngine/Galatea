@@ -1,0 +1,5 @@
+Sanic_Cors==0.9.3
+pytest==3.5.1
+sanic_compress==0.1.1
+sanic==0.7.0
+sanic_limiter==0.1.3

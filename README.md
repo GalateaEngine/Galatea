@@ -1,5 +1,5 @@
 # GALATEA 
-![](https://img.shields.io/badge/Open%20Source-%20-orange.svg?&style=for-the-badge) ![](https://img.shields.io/badge/Open%20Hardware-%20-green.svg?&style=for-the-badge) 
+![](https://img.shields.io/badge/%20-Open%20Source-orange.svg?&style=for-the-badge) ![](https://img.shields.io/badge/%20-Open%20Hardware-green.svg?&style=for-the-badge) 
 
 ### Tech Stack:
 #### Programming languages
