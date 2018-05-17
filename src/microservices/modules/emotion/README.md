@@ -100,7 +100,7 @@ Start with `python ./server.py`
         - `<your_url>/heartbeat`
     - **Returns**
          - ( json ) `{"status":"alive"}`
-
+-----
 #### CONFIG (with parameters)
 ```
 $ python server.py -h
@@ -132,7 +132,7 @@ optional arguments:
                         allow /download_dataset to serve the dataset (defined
                         in --dataset)
 ```
-
+-----
 #### CONFIG (with config file)
 
 - **"port"**(int): The port of your microservice
