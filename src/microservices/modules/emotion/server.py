@@ -13,7 +13,7 @@ app = Sanic()
 CORS(app)
 limiter = Limiter(app, key_func=get_remote_address)
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 config = {}
 
