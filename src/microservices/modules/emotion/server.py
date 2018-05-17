@@ -22,7 +22,7 @@ config = {}
 
 def debug(msg):
     if config.get("debug","False") == True:
-        logger.info(msg)
+        logger.debug(msg)
 
 # Routes
 
