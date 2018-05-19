@@ -10,7 +10,7 @@ import sys
 # Setup
 
 app = Sanic()
-CORS(app)
+CORS(app, automatic_options=True)
 limiter = Limiter(app, key_func=get_remote_address)
 
 logging.basicConfig(level=logging.DEBUG)
