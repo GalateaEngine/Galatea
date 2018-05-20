@@ -1,7 +1,7 @@
 from sanic import Sanic, response, exceptions
 from sanic_cors import CORS, cross_origin
 from sanic_limiter import Limiter, get_remote_address
-import classifier
+from classifier import classify as classify_emotion
 import argparse
 import json
 import logging
@@ -32,12 +32,11 @@ def debug(msg):
 async def classify(request):
     try:
         if(request.args["text"]):
-            return response.json({"classification": classifier.classify(request.args["text"]), "mood": classifier.mood()})
+            return response.json({"classification": classify_emotion(request.args["text"])})
     except:
         debug(("Unexpected error:", sys.exc_info()[0]))
         raise exceptions.ServerError(
             "Bad Request,missing 'text' paramerter", status_code=401)
-
 
 
 @app.route("/add", methods=['POST'])
@@ -112,11 +111,11 @@ if __name__ == "__main__":
                         help='path to the config file')
     parser.add_argument('-P', '--port', metavar='XXXX', type=int, default="5000",
                         help='port of the server')
-    parser.add_argument('-H', '--host', metavar='X.X.X.X', type=str, default="127.0.0.1",
+    parser.add_argument('-H', '--host', metavar='X.X.X.X', type=str, default="0.0.0.0",
                         help='''host of the server
                         (127.0.0.1 for localhost)
                         (0.0.0.0 for entire network)''')
-    parser.add_argument('-W', '--workers', metavar='X', type=int, default="1",
+    parser.add_argument('-W', '--workers', metavar='X', type=int, default="2",
                         help='workers of the server')
     parser.add_argument('-D', '--debug', metavar='true/false', type=bool, default="false",
                         help='debug logging')
