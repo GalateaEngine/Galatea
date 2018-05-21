@@ -50,11 +50,11 @@ classify_emotion("im felling great")
 ### Usage (Microservice)
 Start with `python ./server.py`
 #### API
-- **/classify (GET)** : Classify a text
+- **/ (GET)** : Classify a text
     -  **Arguments**
         -   **text** (string): Text you want to classify      
     - **Example**
-        - `<your_url>/classify?text=Hey there!`
+        - `<your_url>/?text=Hey there!`
     - **Returns**
          - ( json )`{"emotion":"boredom"}`
 - **/add (POST)**: Adds to dataset
