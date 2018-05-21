@@ -10,7 +10,7 @@ x = []
 y = []
 with open(os.path.join(
         os.path.abspath(os.path.dirname("__file__")),
-        'cleaned_emotion_dataset.csv')) as f:
+        'cleaned_emotion_dataset.csv')) as f: #FIX
     for line in f:
         x.append(line.split(";")[0])
         y.append(line.split(";")[1])

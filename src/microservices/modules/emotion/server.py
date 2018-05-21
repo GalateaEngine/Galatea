@@ -26,7 +26,7 @@ def debug(msg):
 # Routes
 
 
-@app.route("/classify", methods=['GET'])
+@app.route("/", methods=['GET'])
 @limiter.limit("")
 async def classify(request):
     try:
