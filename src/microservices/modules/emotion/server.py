@@ -10,10 +10,11 @@ import sys
 # Setup
 
 app = Sanic()
-CORS(app)
+CORS(app, automatic_options=True)
 limiter = Limiter(app, key_func=get_remote_address)
 
-logger = logging.getLogger()
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 config = {}
 
 # Utils
@@ -21,7 +22,7 @@ config = {}
 
 def debug(msg):
     if config.get("debug","False") == True:
-        logger.info(msg)
+        logger.debug(msg)
 
 # Routes
 
